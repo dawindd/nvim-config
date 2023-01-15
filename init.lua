@@ -1,0 +1,6 @@
+require("user")
+require("commands")
+require("syntax")
+require("ui")
+require("extensions")
+require("lsp")

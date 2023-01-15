@@ -1,0 +1,5 @@
+vim.keymap.set({ "o", "x" }, "aG", function()
+	vim.api.nvim_win_set_cursor(0, { 1, 0 })
+	vim.cmd.normal("V")
+	vim.api.nvim_win_set_cursor(0, { vim.fn.line("$"), 0 })
+end, { desc = "Whole buffer text object" })

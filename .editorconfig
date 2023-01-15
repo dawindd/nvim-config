@@ -1,0 +1,15 @@
+[*.lua]
+call_arg_parentheses = keep
+continuation_indent_size = 4
+continuous_assign_statement_align_to_equal_sign = false
+continuous_assign_table_field_align_to_equal_sign = false
+enable_check_codestyle = true
+end_of_line = lf
+indent_style = tab
+insert_final_newline = true
+max_line_length = 80
+quote_style = double
+remove_empty_header_and_footer_lines_in_function = true
+remove_expression_list_finish_comma = false
+tab_width = 4
+table_separator_style = comma

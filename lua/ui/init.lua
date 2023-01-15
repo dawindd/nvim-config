@@ -1,0 +1,6 @@
+require("ui/devicons")
+require("ui/indent-blankline")
+require("ui/lualine")
+require("ui/quickscope")
+require("ui/yank-highlight")
+require("ui/tokyonight")
