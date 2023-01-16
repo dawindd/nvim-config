@@ -15,8 +15,8 @@ function M.ensure(module, callback)
 	if not ok then
 		vim.notify_once(
 			"Module "
-				.. module
-				.. " not found. You may want to use :Setup and :UpdatePlugins.",
+			.. module
+			.. " not found. You may want to use :Setup and :UpdatePlugins.",
 			vim.log.levels.WARN
 		)
 		return
@@ -24,17 +24,6 @@ function M.ensure(module, callback)
 	if nil ~= callback then
 		callback(loaded)
 	end
-end
-
-function M.reload(module)
-	package.loaded[module] = nil
-	M.ensure(module)
-end
-
-function M.get_loaded_buffers()
-	return vim.tbl_filter(function(buffer)
-		return 1 == vim.fn.buflisted(buffer)
-	end, vim.api.nvim_list_bufs())
 end
 
 return M

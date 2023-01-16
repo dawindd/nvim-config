@@ -2,29 +2,15 @@ local U = require("utils")
 U.ensure("lualine", function(lualine)
 	lualine.setup({
 		options = {
-			globalstatus = true,
 			always_divide_middle = false,
-		},
-		tabline = {
-			lualine_a = { "getcwd" },
-			lualine_b = { "filetype" },
-			lualine_c = {},
-			lualine_x = {},
-			lualine_y = {
-				{
-					"buffers",
-					mode = 0,
-					show_filename_only = false,
-					buffers_color = {
-						inactive = "lualine_a_inactive",
-					},
-					symbols = { alternate_file = "" },
-				},
+			globalstatus = true,
+			refresh = {
+				statusline = 250,
+				tabline = 250,
 			},
-			lualine_z = { "#require('utils').get_loaded_buffers()" },
 		},
 		sections = {
-			lualine_a = { "mode" },
+			lualine_a = { "mode", "require('ui/lualine/utils').get_macro_status()" },
 			lualine_b = { "branch" },
 			lualine_c = {
 				{
@@ -52,6 +38,24 @@ U.ensure("lualine", function(lualine)
 				"searchcount",
 			}, { "location" } },
 			lualine_z = { "progress" },
+		},
+		tabline = {
+			lualine_a = { "getcwd" },
+			lualine_b = { "filetype" },
+			lualine_c = {},
+			lualine_x = {},
+			lualine_y = {
+				{
+					"buffers",
+					mode = 0,
+					show_filename_only = false,
+					buffers_color = {
+						inactive = "lualine_a_inactive",
+					},
+					symbols = { alternate_file = "" },
+				},
+			},
+			lualine_z = { "#require('ui/lualine/utils').get_loaded_buffers()" },
 		},
 	})
 end)
