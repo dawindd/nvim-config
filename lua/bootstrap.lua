@@ -1,4 +1,4 @@
-local B = {}
+local M = {}
 local U = require("utils")
 
 local _paqpath = vim.fn.stdpath("data") .. "/site/pack/paqs/start/paq-nvim"
@@ -52,7 +52,7 @@ local function _update_servers(callback)
 	end)
 end
 
-function B.install_paq()
+function M.install_paq()
 	if not _is_paq_installed() then
 		vim.notify("Installing paq", vim.log.levels.INFO)
 		vim.fn.system({
@@ -70,36 +70,36 @@ function B.install_paq()
 	vim.notify("Please restart neovim", vim.log.levels.WARN)
 end
 
-function B.update_plugins()
+function M.update_plugins()
 	_update_plugins(function()
 		vim.notify("\nUpdated all plugins\n", vim.log.levels.INFO)
 		U.quit_if_headless()
 	end)
 end
 
-function B.update_parsers()
+function M.update_parsers()
 	_update_parsers(function()
 		vim.notify("\nUpdated all parsers\n", vim.log.levels.INFO)
 		U.quit_if_headless()
 	end)
 end
 
-function B.update_servers()
+function M.update_servers()
 	_update_servers(function()
 		vim.notify("\nUpdated all servers\n", vim.log.levels.INFO)
 		U.quit_if_headless()
 	end)
 end
 
-function B.update_all()
+function M.update_all()
 	_update_plugins(function()
 		vim.notify("\nUpdated all plugins\n", vim.log.levels.INFO)
 		_update_parsers(function()
 			vim.notify("\nUpdated all parsers\n", vim.log.levels.INFO)
-			B.update_servers()
+			M.update_servers()
 			U.quit_if_headless()
 		end)
 	end)
 end
 
-return B
+return M
