@@ -38,7 +38,49 @@ vim.api.nvim_create_autocmd({ "LspAttach" }, {
 
 		vim.keymap.set({ "n" }, "<leader>lu", vim.lsp.buf.references, {
 			buffer = 0,
-			desc = "LSP - Show uses"
+			desc = "LSP - Show uses",
+		})
+		vim.keymap.set({ "n" }, "[d", vim.diagnostic.goto_prev, {
+			buffer = 0,
+			desc = "Diagnostic - Goto previous"
+		})
+		vim.keymap.set({ "n" }, "]d", vim.diagnostic.goto_next, {
+			buffer = 0,
+			desc = "Diagnostic - Goto next",
+		})
+		vim.keymap.set({ "n" }, "[e", function()
+			vim.diagnostic.goto_prev({ severity = vim.diagnostic.severity.Error })
+		end, {
+			buffer = 0,
+			desc = "Diagnostic - Goto previous error",
+		})
+		vim.keymap.set({ "n" }, "]e", function()
+			vim.diagnostic.goto_next({ severity = vim.diagnostic.severity.Error })
+		end, {
+			buffer = 0,
+			desc = "Diagnostic - Goto next error",
+		})
+		vim.keymap.set({ "i" }, "<tab>", function()
+			if vim.fn.pumvisible() == 1 then
+				return "<c-n>"
+			else
+				return "<tab>"
+			end
+		end, {
+			buffer = 0,
+			desc = "LSP - Next completion",
+			expr = true,
+		})
+		vim.keymap.set({ "i" }, "<s-tab>", function()
+			if vim.fn.pumvisible() == 1 then
+				return "<c-p>"
+			else
+				return "<s-tab>"
+			end
+		end, {
+			buffer = 0,
+			desc = "LSP - Previous completion",
+			expr = true,
 		})
 	end,
 	desc = "Setup LSP keybindings",

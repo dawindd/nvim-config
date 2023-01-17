@@ -42,4 +42,4 @@ vim.cmd.cabbrev("<expr> H (getcmdtype() == ':') ? 'vert help' : 'h'")
 vim.cmd.cabbrev("<expr> V (getcmdtype() == ':') ? 'vsplit' : 'V'")
 
 -- Tab to complete
-vim.keymap.set({ "i" }, "<tab>", "<c-x><c-o>", { desc = "Tab to complete" })
+vim.keymap.set({ "i" }, "<c-tab>", "<c-x><c-o>", { desc = "Tab to complete" })
