@@ -26,7 +26,16 @@ local settings = {
 local U = require("utils")
 U.ensure("neodev", function(neodev)
 	neodev.setup({
-		lspconfig = false
+		lspconfig = false,
+		override = function(_, library)
+			local path = vim.api.nvim_buf_get_name(0)
+			if path:find("nvim", 1, true) ~= nil then
+				library.enabled = true
+				library.runtime = true
+				library.types = true
+				library.plugins = true
+			end
+		end,
 	})
 	before_init = require("neodev.lsp").before_init
 end)
