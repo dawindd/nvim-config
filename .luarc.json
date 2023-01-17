@@ -2,8 +2,11 @@
 	"$schema": "https://raw.githubusercontent.com/sumneko/vscode-lua/master/setting/schema.json",
 	"Lua.runtime.version": "LuaJIT",
 	"Lua.workspace.library": [
-		"/home/dawind/.config/nvim",
+		"${3rd}/luassert/library",
+		"${3rd}/luv/library",
 		"/etc/xdg/nvim",
+		"/home/dawind/.config/nvim",
+		"/home/dawind/.config/nvim/after",
 		"/home/dawind/.local/share/nvim/site",
 		"/home/dawind/.local/share/nvim/site/pack/paqs/start/comment.nvim",
 		"/home/dawind/.local/share/nvim/site/pack/paqs/start/fzf-lua",
@@ -21,15 +24,12 @@
 		"/home/dawind/.local/share/nvim/site/pack/paqs/start/nvim-web-devicons",
 		"/home/dawind/.local/share/nvim/site/pack/paqs/start/paq-nvim",
 		"/home/dawind/.local/share/nvim/site/pack/paqs/start/playground",
+		"/home/dawind/.local/share/nvim/site/pack/paqs/start/playground/after",
 		"/home/dawind/.local/share/nvim/site/pack/paqs/start/quick-scope",
 		"/home/dawind/.local/share/nvim/site/pack/paqs/start/stylua-nvim",
 		"/home/dawind/.local/share/nvim/site/pack/paqs/start/tokyonight.nvim",
-		"/usr/share/nvim/runtime",
 		"/usr/lib/nvim",
-		"/home/dawind/.local/share/nvim/site/pack/paqs/start/playground/after",
-		"/home/dawind/.config/nvim/after",
-		"/usr/share/vim/vimfiles",
-		"${3rd}/luassert/library",
-		"${3rd}/luv/library"
+		"/usr/share/nvim/runtime",
+		"/usr/share/vim/vimfiles"
 	]
 }
