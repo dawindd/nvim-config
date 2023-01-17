@@ -25,7 +25,9 @@ local settings = {
 
 local U = require("utils")
 U.ensure("neodev", function(neodev)
-	neodev.setup({})
+	neodev.setup({
+		lspconfig = false
+	})
 	before_init = require("neodev.lsp").before_init
 end)
 

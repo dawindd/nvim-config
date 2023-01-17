@@ -36,22 +36,6 @@ local function _update_parsers(callback)
 	end)
 end
 
-local function _update_servers(callback)
-	U.ensure("mason", function()
-		local servers = require("user/servers") or {}
-		local nb = #servers
-		vim.notify("Updating " .. nb .. " servers", vim.log.levels.INFO)
-		for index, item in ipairs(servers) do
-			vim.notify(
-				"\nUpdating " .. index .. "/" .. nb .. ": " .. item .. "\t",
-				vim.log.levels.INFO
-			)
-			vim.cmd.MasonInstall(item)
-		end
-		callback()
-	end)
-end
-
 function M.install_paq()
 	if not _is_paq_installed() then
 		vim.notify("Installing paq", vim.log.levels.INFO)
@@ -84,21 +68,11 @@ function M.update_parsers()
 	end)
 end
 
-function M.update_servers()
-	_update_servers(function()
-		vim.notify("\nUpdated all servers\n", vim.log.levels.INFO)
-		U.quit_if_headless()
-	end)
-end
-
 function M.update_all()
 	_update_plugins(function()
 		vim.notify("\nUpdated all plugins\n", vim.log.levels.INFO)
-		_update_parsers(function()
-			vim.notify("\nUpdated all parsers\n", vim.log.levels.INFO)
-			M.update_servers()
-			U.quit_if_headless()
-		end)
+		M.update_parsers()
+		U.quit_if_headless()
 	end)
 end
 

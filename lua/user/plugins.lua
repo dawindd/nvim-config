@@ -15,10 +15,6 @@ return {
 	"numtostr/comment.nvim",
 	"nvim-treesitter/nvim-treesitter-textobjects",
 	"nvim-treesitter/nvim-treesitter-refactor",
-	-- Language Servers
-	"neovim/nvim-lspconfig",
-	"williamboman/mason.nvim",
-	"williamboman/mason-lspconfig.nvim",
 	-- Extensions
 	"ibhagwan/fzf-lua",
 	"lewis6991/gitsigns.nvim",
