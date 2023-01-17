@@ -42,7 +42,7 @@ U.ensure("lualine", function(lualine)
 		tabline = {
 			lualine_a = { "getcwd" },
 			lualine_b = { "filetype" },
-			lualine_c = {},
+			lualine_c = { "require('ui/lualine/utils').get_buffer_servers()" },
 			lualine_x = {},
 			lualine_y = {
 				{

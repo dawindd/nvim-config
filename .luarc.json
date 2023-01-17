@@ -29,6 +29,7 @@
 		"/home/dawind/.local/share/nvim/site/pack/paqs/start/playground/after",
 		"/home/dawind/.config/nvim/after",
 		"/usr/share/vim/vimfiles",
-		"${3rd}/luassert/library"
+		"${3rd}/luassert/library",
+		"${3rd}/luv/library"
 	]
 }

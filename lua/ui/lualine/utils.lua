@@ -24,17 +24,37 @@ function M.get_macro_status()
 	if macro ~= "" then
 		return "Recording @" .. macro
 	end
-	if Recorded_macros ~= {} then
-		local toprint = ""
-		local max = #Recorded_macros
-		for index, reg in ipairs(Recorded_macros) do
-			toprint = toprint .. reg
-			if index ~= max then
-				toprint = toprint .. ","
-			end
-		end
-		return toprint
+	if Recorded_macros == {} then
+		return
 	end
+	local toprint = ""
+	local max = #Recorded_macros
+	for index, reg in ipairs(Recorded_macros) do
+		toprint = toprint .. reg
+		if index ~= max then
+			toprint = toprint .. ","
+		end
+	end
+	return toprint
+end
+
+function M.get_buffer_servers()
+	local server_names = {}
+	vim.lsp.for_each_buffer_client(0, function(server)
+		vim.list_extend(server_names, { server.name }, 1, 1)
+	end)
+	if server_names == {} then
+		return
+	end
+	local max = #server_names
+	local toprint = ""
+	for index, server in ipairs(server_names) do
+		toprint = toprint .. server
+		if index ~= max then
+			toprint = toprint .. ","
+		end
+	end
+	return toprint
 end
 
 return M

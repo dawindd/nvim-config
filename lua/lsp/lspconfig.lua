@@ -1,6 +1,6 @@
 local U = require("utils")
 U.ensure("lspconfig", function(lspconfig)
-	lspconfig.sumneko_lua.setup({
+	--[[ 	lspconfig.sumneko_lua.setup({
 		on_attach = require("autoformat").create_autocommand,
 		settings = {
 			Lua = {
@@ -15,7 +15,7 @@ U.ensure("lspconfig", function(lspconfig)
 				},
 			},
 		},
-	})
+	}) ]]
 
 	lspconfig.jsonls.setup({
 		on_attach = require("autoformat").create_autocommand,
