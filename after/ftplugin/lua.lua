@@ -6,7 +6,7 @@ local root_files = {
 	".stylua.toml",
 	"stylua.toml",
 }
-local config = {
+local settings = {
 	Lua = {
 		completion = {
 			callSnippet = "Replace",
@@ -38,5 +38,5 @@ vim.lsp.start({
 	),
 	before_init = before_init,
 	on_attach = require("autoformat").create_autocommand,
-	settings = config,
+	settings = settings,
 })
