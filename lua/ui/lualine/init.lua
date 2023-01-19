@@ -28,10 +28,16 @@ U.ensure("lualine", function(lualine)
 			lualine_x = {
 				{
 					"diagnostics",
+					always_visible = true,
 					sources = {
 						"nvim_workspace_diagnostic",
 					},
-					always_visible = true,
+					symbols = {
+						error = " ",
+						warn = " ",
+						info = " ",
+						hint = " ",
+					}
 				},
 			},
 			lualine_y = { {
