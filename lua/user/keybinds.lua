@@ -1,11 +1,9 @@
 -- Scroll and focus center of screen
 vim.keymap.set({ "n" }, "<C-d>", "<C-d>zz", { desc = "Scroll down and center" })
 vim.keymap.set({ "n" }, "<C-u>", "<C-u>zz", { desc = "Scroll up and center" })
-
 -- Center search result on screen
 vim.keymap.set({ "n" }, "n", "nzzzv", { desc = "Search and center" })
 vim.keymap.set({ "n" }, "N", "Nzzzv", { desc = "Search and center" })
-
 -- Buffer management
 vim.keymap.set({ "n", "v" }, "[b", "<cmd>bNext<cr>", {
 	desc = "Previous buffer"
