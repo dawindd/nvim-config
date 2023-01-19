@@ -12,10 +12,11 @@ vim.keymap.set({ "n", "v" }, "]b", "<cmd>bnext<cr>", { desc = "Next buffer" })
 vim.keymap.set({ "n", "v" }, "<leader>bd", "<cmd>DelBuf<cr>", {
 	desc = "Close buffer"
 })
-
 -- Don't fill that damn clipboard for nothing
-vim.keymap.set({ "n", "v" }, "d", '"_d', { desc = "Delete into the void" })
-vim.keymap.set({ "n", "v" }, "D", '"_D', {
+vim.keymap.set({ "n", "v" }, "<leader>d", '"_d', {
+	desc = "Delete into the void"
+})
+vim.keymap.set({ "n", "v" }, "<leader>D", '"_D', {
 	desc = "Delete till end of line into the void"
 })
 vim.keymap.set({ "n", "v" }, "c", '"_c', { desc = "Change into the void" })
@@ -35,6 +36,3 @@ vim.keymap.set({ "v" }, ">", ">gv", { desc = "Keep selection when indenting" })
 -- Vertical splits
 vim.cmd.cabbrev("<expr> H (getcmdtype() == ':') ? 'vert help' : 'h'")
 vim.cmd.cabbrev("<expr> V (getcmdtype() == ':') ? 'vsplit' : 'V'")
-
--- Tab to complete
-vim.keymap.set({ "i" }, "<c-tab>", "<c-x><c-o>", { desc = "Tab to complete" })
