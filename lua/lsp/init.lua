@@ -1,4 +1,3 @@
-vim.api.nvim_create_augroup("LspOnAttach", { clear = true })
 vim.api.nvim_create_autocmd("LspAttach", {
 	callback = function(args)
 		local bufnr = args.buf
@@ -7,5 +6,4 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		require("lsp/highlighting").setup(bufnr, client)
 	end,
 	desc = "Sets up lsp functions",
-	group = "LspOnAttach",
 })
