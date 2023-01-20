@@ -1,5 +1,4 @@
-local U = require("utils")
-U.ensure("colorizer", function(colorizer)
+Ensure("colorizer", function(colorizer)
 	colorizer.setup({
 		filetypes = { "*" },
 		user_default_options = {

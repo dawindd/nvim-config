@@ -1,5 +1,4 @@
-local U = require("utils")
-U.ensure("gitsigns", function(gitsigns)
+Ensure("gitsigns", function(gitsigns)
 	gitsigns.setup({
 		current_line_blame = true,
 		numhl = true,

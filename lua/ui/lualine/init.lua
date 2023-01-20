@@ -1,5 +1,4 @@
-local U = require("utils")
-U.ensure("lualine", function(lualine)
+Ensure("lualine", function(lualine)
 	lualine.setup({
 		options = {
 			always_divide_middle = false,

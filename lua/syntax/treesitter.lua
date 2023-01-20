@@ -1,5 +1,4 @@
-local U = require("utils")
-U.ensure("nvim-treesitter.configs", function(configs)
+Ensure("nvim-treesitter.configs", function(configs)
 	require("user/parsers")
 	configs.setup({
 		auto_install = false,

@@ -1,5 +1,4 @@
-local U = require("utils")
-U.ensure("fzf-lua", function(fzf)
+Ensure("fzf-lua", function(fzf)
 	vim.keymap.set({ "n", "v" }, "<leader><leader>f", fzf.files, {
 		desc = "Fuzzy-find files in cwd",
 	})

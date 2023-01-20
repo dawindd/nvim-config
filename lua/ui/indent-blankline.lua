@@ -1,5 +1,4 @@
-local U = require("utils")
-U.ensure("indent_blankline", function(indentlines)
+Ensure("indent_blankline", function(indentlines)
 	local hl_list = {}
 	for i = 1, 8, 1 do
 		hl_list[i] = "IndentBlankLine" .. i

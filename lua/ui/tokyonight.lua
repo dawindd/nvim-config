@@ -1,5 +1,4 @@
-local U = require("utils")
-U.ensure("tokyonight", function(tokyonight)
+Ensure("tokyonight", function(tokyonight)
 	tokyonight.setup({
 		style = "night",
 		transparent = false,

@@ -24,7 +24,7 @@ local settings = {
 }
 
 local U = require("utils")
-U.ensure("neodev", function(neodev)
+Ensure("neodev", function(neodev)
 	neodev.setup({
 		lspconfig = false,
 		override = function(_, library)
