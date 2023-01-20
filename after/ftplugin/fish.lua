@@ -1,2 +1,2 @@
 vim.opt.formatprg = "fish_indent"
-require("autoformat").create_autocommand()
+require("commands/format").create_autocommand()

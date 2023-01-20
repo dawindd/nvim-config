@@ -48,6 +48,6 @@ vim.lsp.start({
 		or vim.fn.getcwd()
 	),
 	before_init = before_init,
-	on_attach = require("autoformat").create_autocommand,
+	on_attach = require("commands/format").create_autocommand,
 	settings = settings,
 })

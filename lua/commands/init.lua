@@ -1,11 +1,6 @@
+require("commands/format")
 require("commands/comment")
 require("commands/surround")
-
-vim.api.nvim_create_user_command("Format", function()
-	require("autoformat").format_whole_file()
-end, {
-	desc = "Formats whole current buffer, respecting formatexpr and formatprog",
-})
 
 vim.api.nvim_create_user_command("Setup", function()
 	require("bootstrap").install_paq()

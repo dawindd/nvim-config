@@ -26,6 +26,6 @@ vim.lsp.start({
 	init_options = {
 		provideFormatter = true,
 	},
-	on_attach = require("autoformat").create_autocommand,
+	on_attach = require("commands/format").create_autocommand,
 	settings = settings,
 })
