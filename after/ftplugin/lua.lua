@@ -23,7 +23,6 @@ local settings = {
 	},
 }
 
-local U = require("utils")
 Ensure("neodev", function(neodev)
 	neodev.setup({
 		lspconfig = false,
