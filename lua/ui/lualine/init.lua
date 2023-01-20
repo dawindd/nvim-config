@@ -21,11 +21,9 @@ U.ensure("lualine", function(lualine)
 						removed = "DiagnosticError",
 					},
 				},
-				{
-					"require('nvim-treesitter').statusline()",
-				},
 			},
 			lualine_x = {
+				{ "require('ui/lualine/utils').get_buffer_servers()" },
 				{
 					"diagnostics",
 					always_visible = true,
@@ -37,18 +35,19 @@ U.ensure("lualine", function(lualine)
 						warn = " ",
 						info = " ",
 						hint = " ",
-					}
+					},
 				},
 			},
-			lualine_y = { {
-				"searchcount",
-			}, { "location" } },
+			lualine_y = {
+				{ "searchcount" },
+				{ "location" },
+			},
 			lualine_z = { "progress" },
 		},
 		tabline = {
 			lualine_a = { "getcwd" },
 			lualine_b = { "filetype" },
-			lualine_c = { "require('ui/lualine/utils').get_buffer_servers()" },
+			lualine_c = {},
 			lualine_x = {},
 			lualine_y = {
 				{

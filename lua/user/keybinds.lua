@@ -23,16 +23,13 @@ vim.keymap.set({ "n", "v" }, "c", '"_c', { desc = "Change into the void" })
 vim.keymap.set({ "n", "v" }, "C", '"_C', {
 	desc = "Change till end of line into the void"
 })
-
 -- Format buffer
 vim.keymap.set({ "n" }, "<leader>f", "<cmd>Format<cr>", {
 	desc = "Format whole buffer"
 })
-
 -- Keep selection when indenting
 vim.keymap.set({ "v" }, "<", "<gv", { desc = "Keep selection when indenting" })
 vim.keymap.set({ "v" }, ">", ">gv", { desc = "Keep selection when indenting" })
-
 -- Vertical splits
 vim.cmd.cabbrev("<expr> H (getcmdtype() == ':') ? 'vert help' : 'h'")
 vim.cmd.cabbrev("<expr> V (getcmdtype() == ':') ? 'vsplit' : 'V'")

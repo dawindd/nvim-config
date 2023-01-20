@@ -18,7 +18,7 @@ function M.setup(bufnr)
 		buffer = bufnr,
 		desc = "LSP - Show function signature",
 	})
-	vim.keymap.set({ "n" }, "<leader>lD", vim.lsp.buf.type_definition, {
+	vim.keymap.set({ "n" }, "<leader>lt", vim.lsp.buf.type_definition, {
 		buffer = bufnr,
 		desc = "LSP - Show type definition",
 	})
