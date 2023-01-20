@@ -35,19 +35,21 @@ Ensure("nvim-treesitter.configs", function(configs)
 			},
 		},
 		textobjects = {
-			enable = true,
-			lookahead = true,
-			keymaps = {
-				["ab"] = "@block.outer",
-				["ib"] = "@block.inner",
-				["ac"] = "@conditional.outer",
-				["ic"] = "@conditional.inner",
-				["af"] = "@function.outer",
-				["if"] = "@function.inner",
-				["al"] = "@loop.outer",
-				["il"] = "@loop.inner",
+			select = {
+				enable = true,
+				lookahead = true,
+				keymaps = {
+					["ab"] = "@block.outer",
+					["ib"] = "@block.inner",
+					["ac"] = "@conditional.outer",
+					["ic"] = "@conditional.inner",
+					["af"] = "@function.outer",
+					["if"] = "@function.inner",
+					["al"] = "@loop.outer",
+					["il"] = "@loop.inner",
+				},
+				include_surrounding_whitespace = true,
 			},
-			include_surrounding_whitespace = true,
 		},
 	})
 
