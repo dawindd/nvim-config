@@ -59,7 +59,7 @@ Ensure("lualine", function(lualine)
 					symbols = { alternate_file = "" },
 				},
 			},
-			lualine_z = { "#require('ui/lualine/utils').get_loaded_buffers()" },
+			lualine_z = { "#require('statusline/utils').get_loaded_buffers()" },
 		},
 	})
 end)
