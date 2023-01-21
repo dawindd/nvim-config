@@ -3,7 +3,7 @@ local M = {}
 vim.api.nvim_create_augroup("LspHighlight", { clear = true })
 function M.setup(bufnr, client)
 	if not client.server_capabilities.documentHighlightProvider then
-		vim.notify("Lsp client " .. client .. " does not support highlighting",
+		vim.notify("Lsp client " .. client.name .. " does not support highlighting",
 			vim.log.levels.WARN)
 		return
 	end
