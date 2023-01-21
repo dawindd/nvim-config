@@ -1,3 +1,5 @@
+require("diagnostics/keybinds")
+
 vim.fn.sign_define({
 	{ name = "DiagnosticSignError", text = "", texthl = "DiagnosticSignError" },
 	{ name = "DiagnosticSignWarn", text = "", texthl = "DiagnosticSignWarn" },

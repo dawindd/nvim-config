@@ -41,27 +41,6 @@ function M.setup(bufnr)
 		buffer = bufnr,
 		desc = "LSP - Rename symbol",
 	})
-	-- Diagnostics
-	vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, {
-		buffer = bufnr,
-		desc = "Diagnostic - Goto previous"
-	})
-	vim.keymap.set("n", "]d", vim.diagnostic.goto_next, {
-		buffer = bufnr,
-		desc = "Diagnostic - Goto next",
-	})
-	vim.keymap.set("n", "[e", function()
-		vim.diagnostic.goto_prev({ severity = vim.diagnostic.severity.ERROR })
-	end, {
-		buffer = bufnr,
-		desc = "Diagnostic - Goto previous error",
-	})
-	vim.keymap.set("n", "]e", function()
-		vim.diagnostic.goto_next({ severity = vim.diagnostic.severity.ERROR })
-	end, {
-		buffer = bufnr,
-		desc = "Diagnostic - Goto next error",
-	})
 	-- Completion
 	vim.keymap.set("i", "<c-tab>", "<c-x><c-o>", {
 		buffer = bufnr,
