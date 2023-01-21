@@ -2,7 +2,6 @@ local M = {}
 
 function M.setup(bufnr)
 	Ensure("fzf-lua", function(fzf)
-		-- LSP
 		vim.keymap.set("n", "<leader>ld", fzf.lsp_definitions, {
 			buffer = bufnr,
 			desc = "LSP - Show definitions",
@@ -41,6 +40,7 @@ function M.setup(bufnr)
 		buffer = bufnr,
 		desc = "LSP - Rename symbol",
 	})
+
 	-- Completion
 	vim.keymap.set("i", "<c-tab>", "<c-x><c-o>", {
 		buffer = bufnr,
