@@ -10,7 +10,7 @@ vim.opt.showmode = false
 vim.opt.splitbelow = true
 vim.opt.splitright = true
 vim.opt.swapfile = false
-vim.opt.switchbuf = "split"
+vim.opt.switchbuf = "useopen"
 vim.opt.termguicolors = true
 vim.opt.updatetime = 250
 
@@ -21,13 +21,6 @@ vim.opt.cursorline = true
 vim.opt.fillchars = {
 	foldclose = "",
 	foldopen = "",
-	horiz = "━",
-	horizdown = "┳",
-	horizup = "┻",
-	vert = "┃",
-	verthoriz = "╋",
-	vertleft = "┨",
-	vertright = "┣",
 }
 vim.opt.foldcolumn = "auto"
 vim.opt.number = true
@@ -59,7 +52,6 @@ vim.opt.tabstop = 4
 vim.opt.tildeop = true
 
 -- Search
-vim.opt.browsedir = "current"
 vim.opt.grepprg = "rg --vimgrep"
 vim.opt.ignorecase = true
 vim.opt.path = { ".", "**", "," }

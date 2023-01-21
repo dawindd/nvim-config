@@ -17,7 +17,7 @@ end
 require("user")
 require("commands")
 require("diagnostics")
-require("extensions")
+require("fzf")
 require("git")
 require("lsp")
 require("syntax")
