@@ -1,4 +1,5 @@
 require("diagnostics/keybinds")
+require("diagnostics/motions")
 
 vim.fn.sign_define({
 	{ name = "DiagnosticSignError", text = "", texthl = "DiagnosticSignError" },

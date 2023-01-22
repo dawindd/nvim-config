@@ -44,7 +44,7 @@ function M.setup(bufnr)
 	-- Completion
 	vim.keymap.set("i", "<c-tab>", "<c-x><c-o>", {
 		buffer = bufnr,
-		desc = "LSP - Trigger omnifunc completion"
+		desc = "LSP - Omnifunc"
 	})
 	vim.keymap.set("i", "<tab>", function()
 		if vim.fn.pumvisible() == 1 then
@@ -54,7 +54,7 @@ function M.setup(bufnr)
 		end
 	end, {
 		buffer = bufnr,
-		desc = "OmniFunc - Next completion",
+		desc = "Omnifunc - Next completion",
 		expr = true,
 	})
 	vim.keymap.set("i", "<s-tab>", function()
@@ -65,7 +65,7 @@ function M.setup(bufnr)
 		end
 	end, {
 		buffer = bufnr,
-		desc = "OmniFunc - Previous completion",
+		desc = "Omnifunc - Previous completion",
 		expr = true,
 	})
 end
