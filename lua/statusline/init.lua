@@ -9,7 +9,7 @@ Ensure("lualine", function(lualine)
 			},
 		},
 		sections = {
-			lualine_a = { "mode", "require('ui/lualine/utils').get_macro_status()" },
+			lualine_a = { "mode", "require('statusline/utils').get_macro_status()" },
 			lualine_b = { "branch" },
 			lualine_c = {
 				{
@@ -22,7 +22,7 @@ Ensure("lualine", function(lualine)
 				},
 			},
 			lualine_x = {
-				{ "require('ui/lualine/utils').get_buffer_servers()" },
+				{ "require('statusline/utils').get_buffer_servers()" },
 				{
 					"diagnostics",
 					always_visible = true,

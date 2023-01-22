@@ -16,16 +16,20 @@ local settings = {
 	},
 }
 
-vim.lsp.start({
+local client = vim.lsp.start({
 	name = "json-lsp",
 	cmd = cmd,
-	root_dir = vim.fs.dirname(
-		vim.fs.find(root_files, { upward = true })[1]
-		or vim.fn.getcwd()
-	),
+	root_dir = require("lsp/utils").find_root(root_files),
 	init_options = {
 		provideFormatter = true,
 	},
 	on_attach = require("commands/format").create_autocommand,
 	settings = settings,
 })
+
+if client == nil then
+	vim.notify("Language server " ..
+		cmd[1] .. " not found, please check your system packages",
+		vim.log.level.ERROR
+	)
+end
