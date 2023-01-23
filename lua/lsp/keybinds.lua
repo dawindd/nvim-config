@@ -42,7 +42,7 @@ function M.setup(bufnr)
 	})
 
 	-- Completion
-	vim.keymap.set("i", "<c-tab>", "<c-x><c-o>", {
+	vim.keymap.set("i", "<c-space>", "<c-x><c-o>", {
 		buffer = bufnr,
 		desc = "LSP - Omnifunc"
 	})
