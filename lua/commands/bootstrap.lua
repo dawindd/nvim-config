@@ -9,7 +9,7 @@ end
 vim.api.nvim_create_user_command(
 	"Setup",
 	function()
-		if not vim.loop.fs_stat(paqpath) then
+		if 0 == vim.fn.isdirectory(paqpath) then
 			vim.notify("Installing paq", vim.log.levels.INFO)
 			vim.fn.system({
 				"git",
