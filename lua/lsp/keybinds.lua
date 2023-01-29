@@ -28,13 +28,9 @@ function M.setup(bufnr)
 		})
 	end)
 
-	vim.keymap.set("n", "<leader>lk", vim.lsp.buf.hover, {
+	vim.keymap.set("n", "K", vim.lsp.buf.hover, {
 		buffer = bufnr,
 		desc = "LSP - Show documentation",
-	})
-	vim.keymap.set({ "n", "i" }, "<C-k>", vim.lsp.buf.signature_help, {
-		buffer = bufnr,
-		desc = "LSP - Show function signature",
 	})
 	vim.keymap.set("n", "<leader>lr", vim.lsp.buf.rename, {
 		buffer = bufnr,

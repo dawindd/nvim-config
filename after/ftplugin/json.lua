@@ -7,6 +7,9 @@ local schemas = {
 	},
 }
 local root_files = { ".git" }
+local init_options = {
+	provideFormatter = true,
+}
 local settings = {
 	json = {
 		schemas = schemas,
@@ -20,15 +23,13 @@ local client = vim.lsp.start({
 	name = "json-lsp",
 	cmd = cmd,
 	root_dir = require("lsp/utils").find_root(root_files),
-	init_options = {
-		provideFormatter = true,
-	},
+	init_options = init_options,
 	on_attach = require("commands/format").create_autocommand,
 	settings = settings,
 })
 
 if client == nil then
-	vim.notify("Language server " ..
+	vim.notify_once("Language server " ..
 		cmd[1] .. " not found, please check your system packages",
 		vim.log.level.ERROR
 	)
