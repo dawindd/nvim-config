@@ -28,7 +28,7 @@ function M.setup(bufnr)
 		})
 	end)
 
-	vim.keymap.set("n", "K", vim.lsp.buf.hover, {
+	vim.keymap.set({ "i", "n" }, "<c-k>", vim.lsp.buf.hover, {
 		buffer = bufnr,
 		desc = "LSP - Show documentation",
 	})

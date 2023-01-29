@@ -60,7 +60,7 @@ vim.opt.smartcase = true
 
 -- Completion
 vim.opt.complete = { ".", "w", "b", "i" }
-vim.opt.completeopt = { "menuone", "noinsert", "noselect", "preview" }
+vim.opt.completeopt = { "menu", "menuone", "noinsert", "noselect", "preview" }
 vim.opt.wildignorecase = true
 
 -- Misc

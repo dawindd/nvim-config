@@ -12,6 +12,7 @@ local client = vim.lsp.start({
 	name = "css-lsp",
 	cmd = cmd,
 	root_dir = require("lsp/utils").find_root(root_files),
+	capabilities = require("lsp/utils").get_capabilities(),
 	settings = settings,
 })
 
