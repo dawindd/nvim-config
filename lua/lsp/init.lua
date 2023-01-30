@@ -1,5 +1,9 @@
 Ensure("fidget", function(fidget)
-	fidget.setup()
+	fidget.setup({
+		text = {
+			spinner = "dots_pulse"
+		}
+	})
 end)
 
 vim.api.nvim_create_autocmd("LspAttach", {
