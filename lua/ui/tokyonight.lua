@@ -20,16 +20,18 @@ Ensure("tokyonight", function(tokyonight)
 			}
 			for index, color in ipairs(rainbow) do
 				highlights["IndentBlankline" .. index] =
-					{ foreground = color, nocombine = true }
+				{ foreground = color, nocombine = true }
 			end
 			highlights.IndentBlankLineContextChar =
-				{ foreground = rainbow[#rainbow] }
+			{ foreground = rainbow[#rainbow] }
 			highlights.IndentBlankLineContextStart =
-				{ special = rainbow[#rainbow], underline = true }
+			{ special = rainbow[#rainbow], underline = true }
 			highlights.QuickScopePrimary =
-				{ special = colors.green, underdouble = true }
+			{ special = colors.green, underdouble = true }
 			highlights.QuickScopeSecondary =
-				{ special = colors.yellow, underdouble = true }
+			{ special = colors.yellow, underdouble = true }
+			highlights.FidgetTitle = { foreground = colors.cyan }
+			highlights.FidgetTask = { link = "FidgetTitle" }
 		end,
 	})
 	vim.cmd.colorscheme("tokyonight")

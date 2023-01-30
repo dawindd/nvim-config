@@ -3,6 +3,7 @@ return {
 	"savq/paq-nvim",
 	-- Eye candy
 	"folke/tokyonight.nvim",
+	"j-hui/fidget.nvim",
 	"kyazdani42/nvim-web-devicons",
 	"lukas-reineke/indent-blankline.nvim",
 	"nvim-lualine/lualine.nvim",

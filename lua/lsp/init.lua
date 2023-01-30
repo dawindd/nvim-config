@@ -1,3 +1,7 @@
+Ensure("fidget", function(fidget)
+	fidget.setup()
+end)
+
 vim.api.nvim_create_autocmd("LspAttach", {
 	callback = function(args)
 		local bufnr = args.buf
