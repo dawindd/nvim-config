@@ -1,7 +1,7 @@
 Ensure("tokyonight", function(tokyonight)
 	tokyonight.setup({
 		style = "night",
-		transparent = false,
+		transparent = true,
 		terminal_colors = true,
 		styles = {
 			floats = "dark",

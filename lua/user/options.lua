@@ -1,67 +1,69 @@
+local o = vim.opt
 -- General
-vim.opt.clipboard = "unnamedplus"
-vim.opt.confirm = true
-vim.opt.diffopt = { "closeoff", "filler", "internal", "vertical" }
-vim.opt.modeline = false
-vim.opt.mouse = "a"
-vim.opt.nrformats = { "alpha", "bin", "hex", "unsigned" }
-vim.opt.report = 0
-vim.opt.showmode = false
-vim.opt.splitbelow = true
-vim.opt.splitright = true
-vim.opt.swapfile = false
-vim.opt.switchbuf = "useopen"
-vim.opt.termguicolors = true
-vim.opt.updatetime = 250
+o.clipboard = "unnamedplus"
+o.confirm = true
+o.diffopt = { "closeoff", "filler", "internal", "vertical" }
+o.modeline = false
+o.mouse = "a"
+o.nrformats = { "alpha", "bin", "hex", "unsigned" }
+o.report = 0
+o.showmode = false
+o.splitbelow = true
+o.splitright = true
+o.swapfile = false
+o.switchbuf = "useopen"
+o.termguicolors = true
+o.updatetime = 250
 
 -- Gutters
-vim.opt.cmdheight = 0
-vim.opt.colorcolumn = { 80, 120 }
-vim.opt.cursorline = true
-vim.opt.fillchars = {
+o.cmdheight = 0
+o.colorcolumn = { 80, 120 }
+o.cursorline = true
+o.fillchars = {
 	foldclose = "",
 	foldopen = "",
 }
-vim.opt.foldcolumn = "auto"
-vim.opt.number = true
-vim.opt.numberwidth = 1
-vim.opt.relativenumber = true
-vim.opt.signcolumn = "auto"
+o.foldcolumn = "auto"
+o.number = true
+o.numberwidth = 1
+o.relativenumber = true
+o.signcolumn = "auto"
 
 -- Text
-vim.opt.formatoptions = "cjlnqrt"
-vim.opt.list = true
-vim.opt.listchars = {
+o.formatoptions = "cjlnqrt"
+o.list = true
+o.listchars = {
 	extends = "",
 	nbsp = "※",
 	precedes = "",
 	space = "•",
 	tab = "<->",
 }
-vim.opt.matchpairs = { "(:)", "{:}", "[:]", "<:>" }
-vim.opt.showbreak = "☇"
-vim.opt.showmatch = true
+o.matchpairs = { "(:)", "{:}", "[:]", "<:>" }
+o.showbreak = "☇"
+o.showmatch = true
 
 -- Formatting
-vim.opt.breakindent = true
-vim.opt.linebreak = true
-vim.opt.shiftround = true
-vim.opt.shiftwidth = 4
-vim.opt.softtabstop = 4
-vim.opt.tabstop = 4
-vim.opt.tildeop = true
+local tabsize = 4
+for _, option in ipairs({ "shiftwidth", "softtabstop", "tabstop" }) do
+	o[option] = tabsize
+end
+o.breakindent = true
+o.linebreak = true
+o.shiftround = true
+o.autoindent = true
 
 -- Search
-vim.opt.grepprg = "rg --vimgrep"
-vim.opt.ignorecase = true
-vim.opt.path = { ".", "**", "," }
-vim.opt.pumblend = 50
-vim.opt.smartcase = true
+o.grepprg = "rg --vimgrep"
+o.ignorecase = true
+o.path = { ".", "**", "," }
+o.pumblend = 50
+o.smartcase = true
 
 -- Completion
-vim.opt.complete = { ".", "w", "b", "i" }
-vim.opt.completeopt = { "menu", "menuone", "noinsert", "noselect", "preview" }
-vim.opt.wildignorecase = true
+o.complete = { ".", "w", "b", "i" }
+o.completeopt = { "menu", "menuone", "noinsert", "noselect", "preview" }
+o.wildignorecase = true
 
 -- Misc
 vim.g.mapleader = " "

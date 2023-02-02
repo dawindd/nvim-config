@@ -1,37 +1,50 @@
+local k = vim.keymap.set
+
+-- Remap basic motions
+k({ "o", "n", "v" }, "j", "h", { desc = "Left" })
+k({ "o", "n", "v" }, "i", "k", { desc = "Up" })
+k({ "o", "n", "v" }, "k", "j", { desc = "Down" })
+k({ "o", "n", "v" }, "l", "l", { desc = "Right" })
+
 -- Scroll and focus center of screen
-vim.keymap.set({ "n", "v" }, "<C-d>", "<C-d>zz",
+k({ "n", "v" }, "<C-d>", "<C-d>zz",
 	{ desc = "Scroll down and center" })
-vim.keymap.set({ "n", "v" }, "<C-u>", "<C-u>zz",
+k({ "n", "v" }, "<C-u>", "<C-u>zz",
 	{ desc = "Scroll up and center" })
+
 -- Center search result on screen
-vim.keymap.set({ "n", "v" }, "n", "nzzzv", { desc = "Search and center" })
-vim.keymap.set({ "n", "v" }, "N", "Nzzzv", { desc = "Search and center" })
+k({ "n", "v" }, "n", "nzzzv", { desc = "Search and center" })
+k({ "n", "v" }, "N", "Nzzzv", { desc = "Search and center" })
+
 -- Buffer management
-vim.keymap.set("n", "[b", "<cmd>bNext<cr>", {
+k("n", "[b", "<cmd>bNext<cr>", {
 	desc = "Previous buffer"
 })
-vim.keymap.set("n", "]b", "<cmd>bnext<cr>", { desc = "Next buffer" })
-vim.keymap.set("n", "<leader>bd", "<cmd>DelBuf<cr>", {
+k("n", "]b", "<cmd>bnext<cr>", { desc = "Next buffer" })
+k("n", "<leader>bd", "<cmd>DelBuf<cr>", {
 	desc = "Close buffer"
 })
+
 -- Don't fill that damn clipboard for nothing
-vim.keymap.set({ "n", "v" }, "<leader>d", '"_d', {
-	desc = "Delete into the void"
-})
-vim.keymap.set({ "n", "v" }, "<leader>D", '"_D', {
+k({ "n", "v" }, "<leader>d", '"_d', { desc = "Delete into the void" })
+k({ "n", "v" }, "x", '"_x', { desc = "Delete character into the void" })
+k({ "n", "v" }, "<leader>D", '"_D', {
 	desc = "Delete till end of line into the void"
 })
-vim.keymap.set({ "n", "v" }, "c", '"_c', { desc = "Change into the void" })
-vim.keymap.set({ "n", "v" }, "C", '"_C', {
+k({ "n", "v" }, "c", '"_c', { desc = "Change into the void" })
+k({ "n", "v" }, "C", '"_C', {
 	desc = "Change till end of line into the void"
 })
+
 -- Format buffer
-vim.keymap.set("n", "<leader>f", "<cmd>Format<cr>", {
+k("n", "<leader>f", "<cmd>Format<cr>", {
 	desc = "Format whole buffer"
 })
+
 -- Keep selection when indenting
-vim.keymap.set("v", "<", "<gv", { desc = "Keep selection when indenting" })
-vim.keymap.set("v", ">", ">gv", { desc = "Keep selection when indenting" })
+k("v", "<", "<gv", { desc = "Keep selection when indenting" })
+k("v", ">", ">gv", { desc = "Keep selection when indenting" })
+
 -- Vertical splits
 vim.cmd.cabbrev("<expr> H (getcmdtype() == ':') ? 'vert help' : 'h'")
 vim.cmd.cabbrev("<expr> V (getcmdtype() == ':') ? 'vsplit' : 'V'")

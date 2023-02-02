@@ -4,8 +4,9 @@ Ensure("lualine", function(lualine)
 			always_divide_middle = false,
 			globalstatus = true,
 			refresh = {
-				statusline = 250,
-				tabline = 250,
+				statusline = 100,
+				tabline = 100,
+				winbar = 100,
 			},
 		},
 		sections = {
