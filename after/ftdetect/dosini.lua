@@ -1,5 +1,5 @@
 vim.filetype.add({
 	extension = {
-		conf = "confini",
+		conf = "dosini",
 	},
 })

@@ -9,6 +9,7 @@ return {
 	"nvim-lualine/lualine.nvim",
 	"unblevable/quick-scope",
 	-- Syntaxes and formatters
+	"fladson/vim-kitty",
 	"nvchad/nvim-colorizer.lua",
 	"nvim-treesitter/nvim-treesitter",
 	-- Commands, operators and text objects
