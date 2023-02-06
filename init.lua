@@ -16,6 +16,7 @@ end
 
 require("user")
 require("commands")
+require("completion")
 require("diagnostics")
 require("fzf")
 require("git")

@@ -10,8 +10,7 @@ end
 
 function M.get_capabilities()
 	local capabilities = vim.lsp.protocol.make_client_capabilities()
-	capabilities.textDocument.completion.completionItem.snippetSupport = true
-	return capabilities
+	return require("cmp_nvim_lsp").default_capabilities(capabilities)
 end
 
 return M

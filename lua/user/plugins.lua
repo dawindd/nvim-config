@@ -20,6 +20,11 @@ return {
 	-- Extensions
 	"ibhagwan/fzf-lua",
 	"lewis6991/gitsigns.nvim",
+	-- Completion
+	"hrsh7th/nvim-cmp",
+	"hrsh7th/cmp-nvim-lsp",
+	"l3mon4d3/luasnip",
+	"saadparwaiz1/cmp_luasnip",
 	-- Neovim development
 	"folke/neodev.nvim",
 	"nvim-treesitter/playground",
