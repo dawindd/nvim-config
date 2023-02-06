@@ -36,34 +36,6 @@ function M.setup(bufnr)
 		buffer = bufnr,
 		desc = "LSP - Rename symbol",
 	})
-
-	-- Completion
-	vim.keymap.set("i", "<c-space>", "<c-x><c-o>", {
-		buffer = bufnr,
-		desc = "LSP - Omnifunc"
-	})
-	vim.keymap.set("i", "<tab>", function()
-		if vim.fn.pumvisible() == 1 then
-			return "<c-n>"
-		else
-			return "<tab>"
-		end
-	end, {
-		buffer = bufnr,
-		desc = "Omnifunc - Next completion",
-		expr = true,
-	})
-	vim.keymap.set("i", "<s-tab>", function()
-		if vim.fn.pumvisible() == 1 then
-			return "<c-p>"
-		else
-			return "<s-tab>"
-		end
-	end, {
-		buffer = bufnr,
-		desc = "Omnifunc - Previous completion",
-		expr = true,
-	})
 end
 
 return M
