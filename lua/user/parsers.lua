@@ -8,6 +8,7 @@ return {
 	"gitignore",
 	"json",
 	"markdown",
+	"markdown_inline",
 	"regex",
 	"yaml",
 	-- Neovim development
@@ -23,4 +24,5 @@ return {
 	"css",
 	"html",
 	"javascript",
+	"php",
 }
