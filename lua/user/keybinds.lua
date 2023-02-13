@@ -1,16 +1,5 @@
 local k = vim.keymap.set
 
--- Remap basic motions
-k({ "o", "n", "v" }, "j", "h", { desc = "Left" })
-k({ "o", "n", "v" }, "i", "k", { desc = "Up" })
-k({ "o", "n", "v" }, "k", "j", { desc = "Down" })
-k({ "o", "n", "v" }, "l", "l", { desc = "Right" })
-k({ "o", "n", "v" }, "h", "i", { desc = "Insert/Inner" })
-k({ "o", "n", "v" }, "<c-w>j", "<c-w>h", { desc = "Left" })
-k({ "o", "n", "v" }, "<c-w>i", "<c-w>k", { desc = "Up" })
-k({ "o", "n", "v" }, "<c-w>k", "<c-w>j", { desc = "Down" })
-k({ "o", "n", "v" }, "<c-w>l", "<c-w>l", { desc = "Right" })
-
 -- Scroll and focus center of screen
 k({ "n", "v" }, "<C-d>", "<C-d>zz",
 	{ desc = "Scroll down and center" })
