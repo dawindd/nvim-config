@@ -1,2 +1,3 @@
-require("user/options")
-require("user/keybinds")
+require("user.autocommands")
+require("user.options")
+require("user.keybinds")
