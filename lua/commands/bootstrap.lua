@@ -39,7 +39,8 @@ vim.api.nvim_create_user_command(
 					quit_if_headless()
 				end,
 			})
-			vim.notify("Updating " .. #plugins .. " plugins", vim.log.levels.INFO)
+			vim.notify("Updating " .. #plugins .. " plugins", vim.log.levels
+			.INFO)
 			paq(plugins)
 			paq:sync()
 		end)
@@ -51,8 +52,11 @@ vim.api.nvim_create_user_command(
 	"UpdateParsers",
 	function()
 		Ensure("nvim-treesitter", function()
-			local parsers = require("user/parsers") or {}
-			vim.cmd.TSUpdateSync(parsers)
+			local cmd = {
+				cmd = "TSUpdateSync",
+				args = require("user/parsers") or {},
+			}
+			vim.cmd(cmd)
 			vim.notify("\nUpdated all parsers\n", vim.log.levels.INFO)
 			quit_if_headless()
 		end)
