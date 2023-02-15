@@ -68,4 +68,3 @@ o.wildignorecase = true
 -- Misc
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
-vim.g.ts_highlight_lua = true
