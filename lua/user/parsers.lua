@@ -25,4 +25,6 @@ return {
 	"html",
 	"javascript",
 	"php",
+	-- Rust development
+	"rust",
 }
