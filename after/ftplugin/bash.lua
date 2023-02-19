@@ -14,6 +14,6 @@ local client = vim.lsp.start({
 if client == nil then
 	vim.notify_once("Language server " ..
 		cmd[1] .. " not found, please check your system packages",
-		vim.log.level.ERROR
+		vim.log.levels.ERROR
 	)
 end
