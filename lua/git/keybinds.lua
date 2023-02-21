@@ -18,7 +18,7 @@ function M.setup(bufnr)
 			buffer = bufnr,
 			desc = "Git - Unstage buffer",
 		})
-		vim.keymap.set("n", "<leader>grb", gitsigns.reset_buffer_index, {
+		vim.keymap.set("n", "<leader>grb", gitsigns.reset_buffer, {
 			buffer = bufnr,
 			desc = "Git - Reset buffer",
 		})
