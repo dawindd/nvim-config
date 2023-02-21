@@ -23,10 +23,9 @@ Ensure("lualine", function(lualine)
 				},
 			},
 			lualine_x = {
-				{ "require('statusline/utils').get_buffer_servers()" },
 				{
 					"diagnostics",
-					always_visible = true,
+					always_visible = false,
 					sources = {
 						"nvim_workspace_diagnostic",
 					},
@@ -45,15 +44,28 @@ Ensure("lualine", function(lualine)
 			lualine_z = { "progress" },
 		},
 		tabline = {
-			lualine_a = { "getcwd" },
+			lualine_a = {
+				{
+					"filename",
+					path = 1,
+					newfile_status = true,
+					symbols = {
+						modified = "",
+						readonly = "",
+						unnamed = "?",
+						newfile = "!",
+					},
+				}
+			},
 			lualine_b = { "filetype" },
-			lualine_c = {},
+			lualine_c = { "require('statusline.utils').get_buffer_servers()" },
 			lualine_x = {},
 			lualine_y = {
 				{
 					"buffers",
 					mode = 0,
 					show_filename_only = false,
+					hide_filename_extension = true,
 					buffers_color = {
 						inactive = "lualine_a_inactive",
 					},
