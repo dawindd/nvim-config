@@ -1,8 +1,5 @@
 local cmd = { "bash-language-server", "start" }
-local root_files = {
-	".git",
-	".shellcheckrc",
-}
+local root_files = { ".shellcheckrc", ".git" }
 
 local client = vim.lsp.start({
 	name = "bash-lsp",
@@ -13,7 +10,7 @@ local client = vim.lsp.start({
 
 if client == nil then
 	vim.notify_once("Language server " ..
-		cmd[1] .. " not found, please check your system packages",
+	cmd[1] .. " not found, please check your system packages",
 		vim.log.levels.ERROR
 	)
 end

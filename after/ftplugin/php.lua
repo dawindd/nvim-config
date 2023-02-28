@@ -1,16 +1,13 @@
-local cmd = { "vscode-html-language-server", "--stdio" }
-local root_files = { ".git" }
+local cmd = { "phpactor", "language-server" }
+local root_files = { "composer.json", ".git" }
 local init_options = {
-	configurationSection = { "html", "css", "javascript" },
-	embeddedLanguages = {
-		css = true,
-		javascript = true,
-	},
-	provideFormatter = true,
+	["language_server_phpstan.enabled"] = true,
+	["language_server_psalm.enabled"] = true,
+	["language_server_completion.trim_leading_dollar"] = true,
 }
 
 local client = vim.lsp.start({
-	name = "html-lsp",
+	name = "phpactor",
 	cmd = cmd,
 	root_dir = require("lsp/utils").find_root(root_files),
 	capabilities = require("lsp/utils").get_capabilities(),
