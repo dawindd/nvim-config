@@ -24,22 +24,39 @@ Ensure("cmp", function(cmp)
 				["<s-tab>"] = cmp.mapping(function(fallback)
 					if cmp.visible() then
 						cmp.select_prev_item()
-					elseif luasnip.jumpable(-1) then
-						luasnip.jump(-1)
+					elseif luasnip.jumpable( -1) then
+						luasnip.jump( -1)
 					else
 						fallback()
 					end
 				end, { "i", "s" }),
-				["<c-space>"] = cmp.mapping.complete(),
-				["<cr>"] = cmp.mapping.confirm({
-					behaviour = cmp.ConfirmBehavior.Replace,
-					select = false,
-				}),
+				["<esc>"] = cmp.mapping(function(fallback)
+					if cmp.visible() then
+						cmp.mapping.abort()
+					else
+						fallback()
+					end
+				end),
+				["<cr>"] = cmp.mapping(function(fallback)
+					if cmp.visible() then
+						cmp.mapping.confirm({
+							behaviour = cmp.ConfirmBehavior.Replace,
+							select = true,
+						})
+					else
+						fallback()
+					end
+				end)
 			}),
 			sources = cmp.config.sources({
 				{ name = "nvim_lsp" },
 				{ name = "luasnip" },
-			})
+			}),
+			window = {
+				completion = cmp.config.window.bordered(),
+				documentation = cmp.config.window.bordered(),
+			},
+			preselect = cmp.PreselectMode.None,
 		})
 	end)
 end)
