@@ -9,5 +9,5 @@ Ensure("fzf-lua", function(fzf)
 			-- split = "belowright new"
 		},
 	})
-	require("fzf/keybinds")
+	require("fzf.keybinds")
 end)

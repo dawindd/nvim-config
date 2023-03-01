@@ -1,6 +1,6 @@
 vim.opt.expandtab = false
 vim.opt.formatprg = "rustfmt --emit=stdout"
-require("commands/format").create_autocommand()
+require("commands.format").create_autocommand()
 
 local cmd = { "rustup", "run", "stable", "rust-analyzer" }
 local root_files = {
@@ -18,8 +18,8 @@ local settings = {
 local client = vim.lsp.start({
 	name = "rust-analyzer",
 	cmd = cmd,
-	root_dir = require("lsp/utils").find_root(root_files),
-	capabilities = require("lsp/utils").get_capabilities(),
+	root_dir = require("lsp.utils").find_root(root_files),
+	capabilities = require("lsp.utils").get_capabilities(),
 	settings = settings,
 })
 

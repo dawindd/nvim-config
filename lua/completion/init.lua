@@ -1,4 +1,4 @@
-local utils = require("completion/utils")
+local utils = require("completion.utils")
 
 Ensure("cmp", function(cmp)
 	Ensure("luasnip", function(luasnip)

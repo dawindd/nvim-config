@@ -11,9 +11,9 @@ local settings = {}
 local client = vim.lsp.start({
 	name = "compose-lsp",
 	cmd = cmd,
-	root_dir = require("lsp/utils").find_root(root_files),
-	capabilities = require("lsp/utils").get_capabilities(),
-	on_attach = require("commands/format").create_autocommand,
+	root_dir = require("lsp.utils").find_root(root_files),
+	capabilities = require("lsp.utils").get_capabilities(),
+	on_attach = require("commands.format").create_autocommand,
 	settings = settings,
 })
 

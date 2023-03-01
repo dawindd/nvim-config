@@ -9,10 +9,10 @@ local init_options = {
 local client = vim.lsp.start({
 	name = "phpactor",
 	cmd = cmd,
-	root_dir = require("lsp/utils").find_root(root_files),
-	capabilities = require("lsp/utils").get_capabilities(),
+	root_dir = require("lsp.utils").find_root(root_files),
+	capabilities = require("lsp.utils").get_capabilities(),
 	init_options = init_options,
-	on_attach = require("commands/format").create_autocommand,
+	on_attach = require("commands.format").create_autocommand,
 })
 
 if client == nil then

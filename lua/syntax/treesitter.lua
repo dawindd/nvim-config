@@ -1,5 +1,5 @@
 Ensure("nvim-treesitter.configs", function(configs)
-	require("user/parsers")
+	require("user.parsers")
 	configs.setup({
 		auto_install = false,
 		highlight = { enable = true },

@@ -1,2 +1,2 @@
-require("syntax/colorizer")
-require("syntax/treesitter")
+require("syntax.colorizer")
+require("syntax.treesitter")

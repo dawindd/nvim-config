@@ -4,8 +4,8 @@ local root_files = { ".shellcheckrc", ".git" }
 local client = vim.lsp.start({
 	name = "bash-lsp",
 	cmd = cmd,
-	root_dir = require("lsp/utils").find_root(root_files),
-	capabilities = require("lsp/utils").get_capabilities(),
+	root_dir = require("lsp.utils").find_root(root_files),
+	capabilities = require("lsp.utils").get_capabilities(),
 })
 
 if client == nil then

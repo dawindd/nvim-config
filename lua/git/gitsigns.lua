@@ -11,9 +11,9 @@ Ensure("gitsigns", function(gitsigns)
 		},
 		word_diff = false,
 		on_attach = function(bufnr)
-			require("git/keybinds").setup(bufnr)
-			require("git/motions").setup(bufnr)
-			require("git/textobjects").setup(bufnr)
+			require("git.keybinds").setup(bufnr)
+			require("git.motions").setup(bufnr)
+			require("git.textobjects").setup(bufnr)
 		end
 	})
 end)

@@ -31,7 +31,7 @@ vim.api.nvim_create_user_command(
 	"UpdatePlugins",
 	function()
 		Ensure("paq", function(paq)
-			local plugins = require("user/plugins") or {}
+			local plugins = require("user.plugins") or {}
 			vim.api.nvim_create_autocmd("User", {
 				pattern = "PaqDoneSync",
 				callback = function()
@@ -54,7 +54,7 @@ vim.api.nvim_create_user_command(
 		Ensure("nvim-treesitter", function()
 			local cmd = {
 				cmd = "TSUpdateSync",
-				args = require("user/parsers") or {},
+				args = require("user.parsers") or {},
 			}
 			vim.cmd(cmd)
 			vim.notify("\nUpdated all parsers\n", vim.log.levels.INFO)

@@ -42,10 +42,10 @@ end)
 local client = vim.lsp.start({
 	name = "lua-lsp",
 	cmd = cmd,
-	root_dir = require("lsp/utils").find_root(root_files),
-	capabilities = require("lsp/utils").get_capabilities(),
+	root_dir = require("lsp.utils").find_root(root_files),
+	capabilities = require("lsp.utils").get_capabilities(),
 	before_init = before_init,
-	on_attach = require("commands/format").create_autocommand,
+	on_attach = require("commands.format").create_autocommand,
 	settings = settings,
 })
 

@@ -1,1 +1,1 @@
-require("git/gitsigns")
+require("git.gitsigns")
