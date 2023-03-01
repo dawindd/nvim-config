@@ -1,1 +1,1 @@
-require("textobjects/buffer")
+require("textobjects.buffer")

@@ -10,7 +10,7 @@ Ensure("lualine", function(lualine)
 			},
 		},
 		sections = {
-			lualine_a = { "mode", "require('statusline/utils').get_macro_status()" },
+			lualine_a = { "mode", "require('statusline.utils').get_macro_status()" },
 			lualine_b = { "branch" },
 			lualine_c = {
 				{
@@ -72,7 +72,7 @@ Ensure("lualine", function(lualine)
 					symbols = { alternate_file = "" },
 				},
 			},
-			lualine_z = { "#require('statusline/utils').get_loaded_buffers()" },
+			lualine_z = { "#require('statusline.utils').get_loaded_buffers()" },
 		},
 	})
 end)
