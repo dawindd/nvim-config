@@ -1,11 +1,14 @@
-local cmd = { "marksman", "server" }
+vim.opt.formatprg = "taplo fmt -"
+require("commands.format").create_autocommand()
+
+local cmd = { "taplo", "lsp", "stdio" }
 local root_files = {
-	".marksman.toml",
-	".git",
+	".taplo.toml",
+	".git"
 }
 
 local client = vim.lsp.start({
-	name = "marksman",
+	name = "taplo",
 	cmd = cmd,
 	root_dir = require("lsp.utils").find_root(root_files),
 	capabilities = require("lsp.utils").get_capabilities(),

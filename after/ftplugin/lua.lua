@@ -1,10 +1,10 @@
 local cmd = { "lua-language-server" }
-local before_init = function() end
+local before_init = function()
+end
 local root_files = {
-	".git",
 	".luarc.json",
 	".stylua.toml",
-	"stylua.toml",
+	".git",
 }
 local settings = {
 	Lua = {
@@ -51,7 +51,7 @@ local client = vim.lsp.start({
 
 if client == nil then
 	vim.notify_once("Language server " ..
-		cmd[1] .. " not found, please check your system packages",
+	cmd[1] .. " not found, please check your system packages",
 		vim.log.levels.ERROR
 	)
 end

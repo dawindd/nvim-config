@@ -4,8 +4,8 @@ require("commands.format").create_autocommand()
 
 local cmd = { "rustup", "run", "stable", "rust-analyzer" }
 local root_files = {
-	".git",
 	"Cargo.toml",
+	".git",
 }
 local settings = {
 	["rust-analyzer"] = {

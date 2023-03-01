@@ -33,7 +33,7 @@ Ensure("cmp", function(cmp)
 				["<c-space>"] = cmp.mapping.abort(),
 				["<cr>"] = cmp.mapping.confirm({
 					behaviour = cmp.ConfirmBehavior.Insert,
-					select = true,
+					select = false,
 				}),
 			}),
 			sources = cmp.config.sources({

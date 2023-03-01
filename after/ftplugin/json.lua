@@ -6,7 +6,9 @@ local schemas = {
 		fileMatch = { ".luarc.json" },
 	},
 }
-local root_files = { ".git" }
+local root_files = {
+	".git",
+}
 local init_options = {
 	provideFormatter = true,
 }
@@ -31,7 +33,7 @@ local client = vim.lsp.start({
 
 if client == nil then
 	vim.notify_once("Language server " ..
-		cmd[1] .. " not found, please check your system packages",
+	cmd[1] .. " not found, please check your system packages",
 		vim.log.levels.ERROR
 	)
 end

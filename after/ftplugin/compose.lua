@@ -1,10 +1,10 @@
 local cmd = { "docker-compose-langserver", "--stdio" }
 local root_files = {
-	".git",
 	"docker-compose.yml",
 	"docker-compose.yaml",
 	"compose.yml",
 	"compose.yaml",
+	".git",
 }
 local settings = {}
 

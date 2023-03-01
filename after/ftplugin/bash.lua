@@ -1,5 +1,8 @@
 local cmd = { "bash-language-server", "start" }
-local root_files = { ".shellcheckrc", ".git" }
+local root_files = {
+	".shellcheckrc",
+	".git",
+}
 
 local client = vim.lsp.start({
 	name = "bash-lsp",

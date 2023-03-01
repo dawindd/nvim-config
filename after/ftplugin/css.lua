@@ -1,5 +1,7 @@
 local cmd = { "vscode-css-language-server", "--stdio" }
-local root_files = { ".git" }
+local root_files = {
+	".git",
+}
 local settings = {
 	css = {
 		validate = true,

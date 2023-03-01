@@ -1,5 +1,7 @@
 local cmd = { "vscode-html-language-server", "--stdio" }
-local root_files = { ".git" }
+local root_files = {
+	".git",
+}
 local init_options = {
 	configurationSection = { "html", "css", "javascript" },
 	embeddedLanguages = {

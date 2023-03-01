@@ -1,5 +1,8 @@
 local cmd = { "phpactor", "language-server" }
-local root_files = { "composer.json", ".git" }
+local root_files = {
+	"composer.json",
+	".git",
+}
 local init_options = {
 	["language_server_phpstan.enabled"] = true,
 	["language_server_psalm.enabled"] = true,
