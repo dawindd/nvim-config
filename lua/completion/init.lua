@@ -30,23 +30,11 @@ Ensure("cmp", function(cmp)
 						fallback()
 					end
 				end, { "i", "s" }),
-				["<esc>"] = cmp.mapping(function(fallback)
-					if cmp.visible() then
-						cmp.mapping.abort()
-					else
-						fallback()
-					end
-				end),
-				["<cr>"] = cmp.mapping(function(fallback)
-					if cmp.visible() then
-						cmp.mapping.confirm({
-							behaviour = cmp.ConfirmBehavior.Replace,
-							select = true,
-						})
-					else
-						fallback()
-					end
-				end)
+				["<c-space>"] = cmp.mapping.abort(),
+				["<cr>"] = cmp.mapping.confirm({
+					behaviour = cmp.ConfirmBehavior.Insert,
+					select = true,
+				}),
 			}),
 			sources = cmp.config.sources({
 				{ name = "nvim_lsp" },
