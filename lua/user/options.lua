@@ -17,7 +17,7 @@ o.updatetime = 250
 
 -- Gutters
 o.cmdheight = 0
-o.colorcolumn = { 80, 120 }
+o.colorcolumn = { 100 }
 o.cursorline = true
 o.fillchars = {
 	foldclose = "",

@@ -8,7 +8,7 @@ local root_files = {
 	".git",
 }
 local settings = {
-	["rust-analyzer"] = {
+		["rust-analyzer"] = {
 		checkOnSave = {
 			command = "clippy",
 		},
@@ -25,7 +25,7 @@ local client = vim.lsp.start({
 
 if client == nil then
 	vim.notify_once("Language server " ..
-	cmd[1] .. " not found, please check your system packages",
+		cmd[1] .. " not found, please check your system packages",
 		vim.log.levels.ERROR
 	)
 end
