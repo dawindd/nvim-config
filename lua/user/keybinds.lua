@@ -1,5 +1,8 @@
 local k = vim.keymap.set
 
+-- Improved motions
+k({ "n", "v", "o" }, "l", "h", { desc = "Move left" })
+k({ "n", "v", "o" }, "m", "l", { desc = "Move right" })
 -- Scroll and focus center of screen
 k({ "n", "v" }, "<C-d>", "<C-d>zz",
 	{ desc = "Scroll down and center" })
