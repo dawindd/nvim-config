@@ -21,12 +21,12 @@ k("n", "<leader>bd", "<cmd>DelBuf<cr>", {
 
 -- Don't fill that damn clipboard for nothing
 k({ "n", "v" }, "<leader>d", '"_d', { desc = "Delete into the void" })
-k({ "n", "v" }, "x", '"_x', { desc = "Delete character into the void" })
+k({ "n", "v" }, "<leader>x", '"_x', { desc = "Delete character into the void" })
 k({ "n", "v" }, "<leader>D", '"_D', {
 	desc = "Delete till end of line into the void"
 })
-k({ "n", "v" }, "c", '"_c', { desc = "Change into the void" })
-k({ "n", "v" }, "C", '"_C', {
+k({ "n", "v" }, "<leader>c", '"_c', { desc = "Change into the void" })
+k({ "n", "v" }, "<leader>C", '"_C', {
 	desc = "Change till end of line into the void"
 })
 
