@@ -56,15 +56,19 @@ o.autoindent = true
 -- Search
 o.grepprg = "rg --vimgrep"
 o.ignorecase = true
-o.path = { ".", "**", "," }
+o.path = { ".", "**" }
 o.pumblend = 50
 o.smartcase = true
 
 -- Completion
-o.complete = { ".", "w", "b", "i" }
+o.complete = { ".", "w", "b", "u" }
 o.completeopt = { "menu", "menuone", "noinsert", "noselect", "preview" }
 o.wildignorecase = true
 
 -- Misc
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
+
+-- Netrw
+vim.g.netrw_banner = 0
+vim.g.netrw_liststyle = 3
